@@ -1,0 +1,5 @@
+#!/bin/sh
+LOG_FILE=/root/system-health.cron.log
+/bin/echo "Running system-health.cron" > $LOG_FILE
+/bin/date >> $LOG_FILE
+/usr/bin/nice /usr/bin/python /home/dhooper/git/system-health/main.py >> $LOG_FILE
